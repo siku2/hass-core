@@ -1,0 +1,22 @@
+{
+  "domain": "dingz",
+  "name": "Dingz",
+  "after_dependencies": ["integration", "mqtt"],
+  "codeowners": ["@siku2"],
+  "config_flow": true,
+  "iot_class": "local_polling",
+  "mqtt": ["dingz/+/announce"],
+  "requirements": [],
+  "zeroconf": [
+    {
+      "type": "_http._tcp.local.",
+      "name": "dingz*"
+    },
+    {
+      "type": "_http._tcp.local.",
+      "properties": {
+        "mac": "246f28*"
+      }
+    }
+  ]
+}
